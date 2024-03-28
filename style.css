@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* 共通 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* ヘッダー */
+header{
+  background-color: rgb(17, 120, 253);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+header ul{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* お得情報 */
+section{
+  background-image: url(pexels-karolina-grabowska-4397910.jpg);
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+section h2{
+  display: inline-block;
+  padding: 50px 20px;
+  background-color: rgba(76, 152, 252, 0.699);
+  border-radius: 20px;
+  color: black;
+  margin: 100px 20% ;
+}
+section span{
+  color: yellow;
+}
+
+/* メイン */
+main{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 38px 7% 0px;
+}
+.foodimg{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.foodblock img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.foodblock img:hover{
+  transform: scale(1.16,1.16);
+}
+.foodblock h2{
+  margin: 35px 0;
+}
+.foodblock .setumei{
+  border-bottom: 1px solid gray;
+  margin: 0 0 20px 0;
+}
+.foodblock .detail{
+  margin-bottom: 20px;
+}
+.foodblock span{
+  color: gray;
+}
+.foodblock .redcolor{
+  color: red;
+  font-size: 24px;
+}
+.foodblock button{
+  background-color: rgb(50, 139, 255);
+  font-weight: bold;
+  padding: 10px 60px;
+  margin: 20px 0 40px 0;
+  border:1px solid gray;
+}
+.foodblock button:hover{
+  background-color:rgb(39, 130, 251);
+}
+
+/* PCサイズ */
+@media(min-width:768px){
+  /* ヘッダー */
+  header ul{
+    gap: 25px;
+  }
+
+  /* お得情報 */
+  section{
+    height: 625px;
+  }
+  section h2{
+    font-size: 50px;
+    padding: 10px 15px;
+    margin: 150px 1% 150px 48%;
+  }
+
+  /* メイン */
+  main{
+    margin: 38px 4% 0px;
+    gap: 70px;
+  }
+  .foodblock{
+    width: 47%;
+
+  }
+}
+
+/* スマホサイズ */
+@media(max-width:480px){
+  header ul{
+    margin-top: 30px;
+    display: block;
+  }
+  section h2{
+    margin: 100px 5px;
+  }
+}
